@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentService {
     
-    // for mongo db repository integration -- you dont need JPA if u use mongo
+    // for mongo db repository integration -- you dont need JPA if u use mongodb 
     private final StudentRepository studentRepository;
 
     @Autowired
