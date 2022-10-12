@@ -18,18 +18,16 @@ public class StudentController {
     @Autowired
     private final StudentService studentService;
 
-    //@Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
 
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<Student>> getAllStudents() {
         return new ResponseEntity<>(studentService.getStudents(), HttpStatus.OK);
 
     }
-
 
 
     @PostMapping
