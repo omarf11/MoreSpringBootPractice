@@ -36,8 +36,13 @@ public class StudentService {
         if (studentRepository.existsById(id)) {
             studentRepository.deleteById(id);
         } else {
-            throw new IllegalStateException("User does not exist!");
+            throw new IllegalStateException("User " + id + " does not exist!");
         }
+
+
+
+        //Use @Transactional for putMapping implementation
+        // only need to use getters and setters to update the document
 
         // Optional<Student> studentOptional = studentRepository.findStudentById(id);
 

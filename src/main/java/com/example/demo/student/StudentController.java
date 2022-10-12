@@ -35,6 +35,8 @@ public class StudentController {
         studentService.addnewStudent(student);
     }
 
+    //implement put mapping here if u want
+
     @DeleteMapping(path = "{studentId}")
     public void deleteStudent(@PathVariable("studentId") String studentId){
         studentService.deleteStudent(studentId);
